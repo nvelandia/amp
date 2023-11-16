@@ -1,0 +1,179 @@
+:root {
+  --color-primary: #005af0;
+  --color-text-light: #fff;
+  --color-background: #280a59;
+  --color-tyc-naranja: #ff4c22;
+  --margin-tyc: 45px;
+}
+@font-face {
+  font-family: "Monserrat";
+  src: url("./fonts/Montserrat/static/Montserrat-Medium.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Monserrat";
+  src: url("./fonts/Montserrat/static/Montserrat-Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Monserrat";
+  src: url("./fonts/Montserrat/static/Montserrat-Black.ttf");
+  font-weight: 800;
+}
+
+amp-story-page {
+  font-family: "Monserrat", sans-serif;
+  background: var(--color-background);
+}
+amp-story-grid-layer {
+  align-items: center;
+  justify-items: center;
+}
+
+/* Shortcuts */
+.p-0 {
+  padding: 0;
+}
+.p-50 {
+  padding: var(--margin-tyc);
+}
+.mb-2 {
+  margin-bottom: 2;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-end {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-800 {
+  font-weight: 800;
+}
+
+/* General Story */
+
+.story__bg {
+  margin-bottom: 86px;
+}
+.story__bg-gradient {
+  background: var(
+    --tyc-gradient-bg,
+    radial-gradient(90% 52%, #ff4c22 0%, #0a1159 100%)
+  );
+  margin-bottom: 16.9%;
+}
+.story__footer {
+  position: absolute;
+  bottom: 0;
+}
+.story__vs {
+  margin-bottom: 23%;
+  align-content: flex-end;
+}
+.story__vs-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-tyc-naranja);
+}
+.story__vs-team {
+  width: 3.8rem;
+  height: 3.5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+.story__vs-result {
+  color: #fff;
+  height: 100%;
+  width: 3rem;
+  text-align: center;
+}
+.story__vs-vs {
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  width: 3rem;
+}
+.story__vs-escudo {
+  width: 2.7rem;
+  height: 2.7rem;
+  object-fit: contain;
+}
+.story__body {
+  align-content: flex-end;
+  padding-right: var(--margin-tyc);
+  margin-bottom: 23%;
+  padding-bottom: var(--margin-tyc);
+}
+.story__body__container {
+  margin-bottom: 3.5rem;
+}
+.story__body__context {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: var(--margin-tyc);
+}
+.story__body__context-torneo {
+  width: 4rem;
+  height: 4rem;
+}
+.story__body__context-time {
+  height: 3rem;
+  color: #ffffff;
+}
+.story__body__context-time div {
+  display: flex;
+  justify-content: flex-end !important;
+  align-items: flex-end;
+  width: auto;
+  height: 100%;
+}
+/* min-font-size="15"
+max-font-size="18" */
+.story__body__foto {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0px 0 30px 0;
+}
+.story__body__foto img {
+  object-fit: contain;
+}
+.story__body__text {
+  align-content: flex-end;
+  margin-bottom: 17%;
+}
+.gol__body__text {
+  margin-bottom: 5%;
+}
+.gol__body__text-container {
+  margin-bottom: 25%;
+  padding-bottom: 3.5rem;
+}
+.story__body__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.text-shadow-pop-tl {
+  -webkit-animation: text-shadow-pop-tl 0.6s both;
+  animation: text-shadow-pop-tl 0.6s both;
+}
+.story__body__title div {
+  display: flex !important;
+  align-items: flex-start !important;
+  color: #fff;
+}
+.story__body__description div {
+  color: #fff;
+  justify-content: flex-start;
+}
