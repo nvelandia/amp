@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html amp lang="en">
   <head>
     <meta charset="utf-8" />
     <title>TyC Stories</title>
     <link rel="canonical" href="<% canonical %>" />
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
     <meta name="viewport" content="width=device-width" />
-    
+
     <script
       async
       custom-element="amp-story"
@@ -75,8 +74,8 @@
         }
         100% {
           text-shadow: -1px 0px #ff4c22, -2px 0 #ff4c22, -3px 0 #ff4c22,
-          -4px 0 #0a1159, -5px 0  #0a1159, -4px 0 #0a1159,
-          -2px -4px #0a1159, -4px 0 #0a1159;
+            -4px 0 #0a1159, -5px 0 #0a1159, -4px 0 #0a1159, -2px -4px #0a1159,
+            -4px 0 #0a1159;
           -webkit-transform: translateX(0px) translateY(0px);
           transform: translateX(0px) translateY(0px);
         }
@@ -96,7 +95,6 @@
           transform: translateX(0px);
         }
       }
-
     </style>
     <noscript
       ><style amp-boilerplate>
@@ -109,9 +107,7 @@
       </style></noscript
     >
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <style amp-custom>
-    
-    </style>
+    <style amp-custom></style>
   </head>
   <body>
     <amp-story
@@ -123,38 +119,127 @@
       poster-square-src="https://picsum.photos/300/300"
       poster-landscape-src="https://picsum.photos/400/300"
     >
-      <amp-story-page id="page0">
+      <amp-story-page id="page">
+        <!-- Gradient -->
         <amp-story-grid-layer template="fill" class="p-0">
-          <amp-img
-            id="bg"
-            src="assets/status/bg-gradient.png"
-            layout="fill"
-            alt="Fondo"
-            class="story__bg"
-          ></amp-img>
-        </amp-story-grid-layer>middle-third">
-          <h1>fade-in</h1>
-          <div
-            class="square test"
-            animate-in="fade-in"
-            animate-in-delay="2s"
-            animate-in-duration="5s"
-          ></div>
+          <div class="story__bg-gradient"></div>
         </amp-story-grid-layer>
-        <amp-story-grid-layer template="lower-third">
-          <div
-            class="square test"
-            animate-in="fade-in"
-            animate-in-delay="2s"
-            animate-in-duration="5s"
-          ></div>
+      </amp-story-page>
+
+      <amp-story-page id="type-cover">
+        <!-- Gradient -->
+        <amp-story-grid-layer template="fill" class="p-0">
+          <div class="story__bg-gradient"></div>
+        </amp-story-grid-layer>
+        <!-- Footer -->
+        <amp-story-grid-layer template="vertical" class="p-0">
+          <amp-img
+            id="footer"
+            src="assets/status/footer.png"
+            layout="fixed-height"
+            alt="TyC Sports"
+            height="115"
+            class="story__footer"
+          ></amp-img>
+        </amp-story-grid-layer>
+        <!-- Trama -->
+        <amp-story-grid-layer template="vertical" class="p-0">
+          <amp-img
+            id="story__trama"
+            src="assets/cover/tycsports-trama.png"
+            layout="fill"
+            alt="story__trama"
+          ></amp-img>
+        </amp-story-grid-layer>
+        <!-- Result -->
+        <amp-story-grid-layer template="vertical" class="p-50 story__vs">
+          <div class="story__vs-container cover-transparent">
+            <div class="story__vs-team cover-transparent center">
+              <amp-img
+                id="escudo_local"
+                src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
+                layout="responsive"
+                alt="escudo_local"
+                class="story__vs-escudo"
+              ></amp-img>
+            </div>
+            <div class="center">
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result cover-result fw-800"
+                width="300"
+                height="50"
+                min-font-size="10"
+                max-font-size="30"
+              >
+                Alm. Brown vs. All Boys
+              </amp-fit-text>
+            </div>
+            <div class="story__vs-team cover-transparent center">
+              <amp-img
+                id="escudo_visitante"
+                src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/2.png"
+                layout="responsive"
+                alt="escudo_visitante"
+                class="story__vs-escudo"
+              ></amp-img>
+            </div>
+          </div>
+        </amp-story-grid-layer>
+        <!-- Tournament y time -->
+        <amp-story-grid-layer
+          template="vertical"
+          class="p-0 story__body cover-foto"
+        >
+          <div class="story__body__container">
+            <div
+              class="story__body__context"
+              animate-in="fade-in"
+              animate-in-duration="2s"
+            >
+              <amp-img
+                id="foto"
+                src="assets/status/torneo.png"
+                layout="intrinsic"
+                alt="foto torneo"
+                height="250"
+                width="350"
+                class="story__body__context-torneo"
+              ></amp-img>
+            </div>
+            <amp-img
+              id="foto"
+              src="assets/cover/foto.png"
+              layout="responsive"
+              alt="foto"
+              height="220"
+              width="350"
+              class="story__body__foto"
+              animate-in="fly-in-left"
+              animate-in-duration="1s"
+            ></amp-img>
+          </div>
+        </amp-story-grid-layer>
+        <!-- Minute to minute -->
+        <amp-story-grid-layer template="horizontal" class="p-0 tag-container">
+          <amp-img
+            id="foto"
+            src="assets/cover/tag.png"
+            layout="intrinsic"
+            alt="foto"
+            height="200"
+            width="200"
+            class="tag-foto"
+            animate-in="fly-in-bottom"
+            animate-in-duration="1s"
+          ></amp-img>
         </amp-story-grid-layer>
       </amp-story-page>
 
       <amp-story-page id="type-status">
         <!-- Gradient -->
         <amp-story-grid-layer template="fill" class="p-0">
-          <div class="story__bg-gradient" ></div>
+          <div class="story__bg-gradient"></div>
         </amp-story-grid-layer>
         <!-- Footer -->
         <amp-story-grid-layer template="vertical" class="p-0">
@@ -174,70 +259,71 @@
             src="assets/status/trama.png"
             layout="fill"
             alt="story__trama"
-            ></amp-img>
+          ></amp-img>
         </amp-story-grid-layer>
         <!-- Result -->
-        <amp-story-grid-layer template="vertical" class="p-50 story__vs">          
-          <div class="story__vs-container" >
+        <amp-story-grid-layer template="vertical" class="p-50 story__vs">
+          <div class="story__vs-container">
             <div class="story__vs-team center">
               <amp-img
-              id="escudo_local"
-              src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
-              layout="responsive"
-              alt="escudo_local"
-              class="story__vs-escudo"
+                id="escudo_local"
+                src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
+                layout="responsive"
+                alt="escudo_local"
+                class="story__vs-escudo"
               ></amp-img>
             </div>
             <div class="center">
               <amp-fit-text
-              layout="responsive"
-              class="story__vs-result fw-800"
-              width="100%"
-              height="100%"
-              min-font-size="28"
-              max-font-size="40"
-            >
-              0 
-            </amp-fit-text>
-            <amp-fit-text
-              layout="responsive"
-              class="story__vs-vs fw-400"
-              width="100%"
-              height="100%"
-              min-font-size="20"
-              max-font-size="21"
-            >
-              vs
-            </amp-fit-text>
-            <amp-fit-text
-              layout="responsive"
-              class="story__vs-result fw-800"
-              width="100%"
-              height="100%"
-              min-font-size="28"
-              max-font-size="40"
-            >
-              0 
-            </amp-fit-text>
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                0
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-vs fw-400"
+                width="100%"
+                height="100%"
+                min-font-size="20"
+                max-font-size="21"
+              >
+                vs
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                0
+              </amp-fit-text>
             </div>
             <div class="story__vs-team center">
               <amp-img
-              id="escudo_visitante"
-              src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/1042.png"
-              layout="responsive"
-              alt="escudo_visitante"
-              class="story__vs-escudo"
+                id="escudo_visitante"
+                src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/2.png"
+                layout="responsive"
+                alt="escudo_visitante"
+                class="story__vs-escudo"
               ></amp-img>
             </div>
           </div>
         </amp-story-grid-layer>
         <!-- Tournament y time -->
         <amp-story-grid-layer template="vertical" class="p-0 story__body">
-          <div  class="story__body__container" >
+          <div class="story__body__container">
             <div
               class="story__body__context"
               animate-in="fade-in"
-              animate-in-duration="2s">
+              animate-in-duration="2s"
+            >
               <amp-img
                 id="foto"
                 src="assets/status/torneo.png"
@@ -247,20 +333,22 @@
                 width="350"
                 class="story__body__context-torneo"
               ></amp-img>
-              <div class="center" >
+              <div class="center">
                 <amp-fit-text
-                    layout="responsive"
-                    class="story__body__context-time fw-400"
-                    min-font-size="30"
-                    max-font-size="35">
-                    0’
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="30"
+                  max-font-size="35"
+                >
+                  0’
                 </amp-fit-text>
                 <amp-fit-text
-                    layout="responsive"
-                    class="story__body__context-time fw-400"
-                    min-font-size="20"
-                    max-font-size="25">
-                     1T
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="20"
+                  max-font-size="25"
+                >
+                  1T
                 </amp-fit-text>
               </div>
             </div>
@@ -274,11 +362,14 @@
               class="story__body__foto"
               animate-in="fly-in-left"
               animate-in-duration="1s"
-            ></amp-img>           
+            ></amp-img>
           </div>
         </amp-story-grid-layer>
         <!-- Title -->
-        <amp-story-grid-layer template="vertical" class="p-50 story__body__text">
+        <amp-story-grid-layer
+          template="vertical"
+          class="p-50 story__body__text"
+        >
           <div style="color: #fff; padding: 0">
             <amp-fit-text
               width="200"
@@ -299,7 +390,7 @@
       <amp-story-page id="type-gol">
         <!-- Gradient -->
         <amp-story-grid-layer template="fill" class="p-0">
-          <div class="story__bg-gradient" ></div>
+          <div class="story__bg-gradient"></div>
         </amp-story-grid-layer>
         <!-- Footer -->
         <amp-story-grid-layer template="vertical" class="p-0">
@@ -319,70 +410,71 @@
             src="assets/gol/tycsports-trama.png"
             layout="fill"
             alt="story__trama"
-            ></amp-img>
+          ></amp-img>
         </amp-story-grid-layer>
         <!-- Result -->
-        <amp-story-grid-layer template="vertical" class="p-50 story__vs">          
-          <div class="story__vs-container" >
+        <amp-story-grid-layer template="vertical" class="p-50 story__vs">
+          <div class="story__vs-container">
             <div class="story__vs-team center">
               <amp-img
-              id="escudo_local"
-              src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
-              layout="responsive"
-              alt="escudo_local"
-              class="story__vs-escudo"
+                id="escudo_local"
+                src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
+                layout="responsive"
+                alt="escudo_local"
+                class="story__vs-escudo"
               ></amp-img>
             </div>
             <div class="center">
               <amp-fit-text
-              layout="responsive"
-              class="story__vs-result fw-800"
-              width="100%"
-              height="100%"
-              min-font-size="28"
-              max-font-size="40"
-            >
-              1 
-            </amp-fit-text>
-            <amp-fit-text
-              layout="responsive"
-              class="story__vs-vs fw-400"
-              width="100%"
-              height="100%"
-              min-font-size="20"
-              max-font-size="21"
-            >
-              vs
-            </amp-fit-text>
-            <amp-fit-text
-              layout="responsive"
-              class="story__vs-result fw-800"
-              width="100%"
-              height="100%"
-              min-font-size="28"
-              max-font-size="40"
-            >
-              0 
-            </amp-fit-text>
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                1
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-vs fw-400"
+                width="100%"
+                height="100%"
+                min-font-size="20"
+                max-font-size="21"
+              >
+                vs
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                0
+              </amp-fit-text>
             </div>
             <div class="story__vs-team center">
               <amp-img
-              id="escudo_visitante"
-              src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/1042.png"
-              layout="responsive"
-              alt="escudo_visitante"
-              class="story__vs-escudo"
+                id="escudo_visitante"
+                src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/2.png"
+                layout="responsive"
+                alt="escudo_visitante"
+                class="story__vs-escudo"
               ></amp-img>
             </div>
           </div>
         </amp-story-grid-layer>
         <!-- Tournament y time -->
         <amp-story-grid-layer template="vertical" class="p-0 story__body">
-          <div  class="story__body__container" >
+          <div class="story__body__container">
             <div
               class="story__body__context"
               animate-in="fade-in"
-              animate-in-duration="2s">
+              animate-in-duration="2s"
+            >
               <amp-img
                 id="foto"
                 src="assets/status/torneo.png"
@@ -390,22 +482,24 @@
                 alt="foto torneo"
                 height="250"
                 width="350"
-                class="story__body__context-torneo"
+                class="story__body__context-torneo d-none"
               ></amp-img>
-              <div class="center" >
+              <div class="center">
                 <amp-fit-text
-                    layout="responsive"
-                    class="story__body__context-time fw-400"
-                    min-font-size="30"
-                    max-font-size="35">
-                    37’
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="30"
+                  max-font-size="35"
+                >
+                  37’
                 </amp-fit-text>
                 <amp-fit-text
-                    layout="responsive"
-                    class="story__body__context-time fw-400"
-                    min-font-size="20"
-                    max-font-size="25">
-                     1T
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="20"
+                  max-font-size="25"
+                >
+                  1T
                 </amp-fit-text>
               </div>
             </div>
@@ -419,11 +513,14 @@
               class="story__body__foto"
               animate-in="fly-in-left"
               animate-in-duration="1s"
-            ></amp-img>           
+            ></amp-img>
           </div>
         </amp-story-grid-layer>
         <!-- Title -->
-        <amp-story-grid-layer template="vertical" class="p-50 story__body__text gol__body__text">
+        <amp-story-grid-layer
+          template="vertical"
+          class="p-50 story__body__text gol__body__text"
+        >
           <div class="story__body__text-container gol__body__text-container">
             <amp-fit-text
               width="200"
@@ -438,18 +535,18 @@
               ¡GOL!
             </amp-fit-text>
             <amp-fit-text
-                width="200"
-                height="14"
-                layout="responsive"
-                class="fw-400 story__body__description"
-                min-font-size="12"
-                max-font-size="16"
-              >
+              width="200"
+              height="8"
+              layout="responsive"
+              class="fw-400 story__body__description"
+              min-font-size="12"
+              max-font-size="16"
+            >
               9'1T ALL BOYS
             </amp-fit-text>
             <amp-fit-text
               width="200"
-              height="40"
+              height="30"
               layout="responsive"
               class="fw-600 story__body__description"
               min-font-size="15"
@@ -464,7 +561,7 @@
       <amp-story-page id="type-card">
         <!-- Gradient -->
         <amp-story-grid-layer template="fill" class="p-0">
-          <div class="story__bg-gradient" ></div>
+          <div class="story__bg-gradient"></div>
         </amp-story-grid-layer>
         <!-- Footer -->
         <amp-story-grid-layer template="vertical" class="p-0">
@@ -484,70 +581,71 @@
             src="assets/card/tycsports-trama.png"
             layout="fill"
             alt="story__trama"
-            ></amp-img>
+          ></amp-img>
         </amp-story-grid-layer>
         <!-- Result -->
-        <amp-story-grid-layer template="vertical" class="p-50 story__vs">          
-          <div class="story__vs-container" >
+        <amp-story-grid-layer template="vertical" class="p-50 story__vs">
+          <div class="story__vs-container">
             <div class="story__vs-team center">
               <amp-img
-              id="escudo_local"
-              src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
-              layout="responsive"
-              alt="escudo_local"
-              class="story__vs-escudo"
+                id="escudo_local"
+                src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
+                layout="responsive"
+                alt="escudo_local"
+                class="story__vs-escudo"
               ></amp-img>
             </div>
             <div class="center">
               <amp-fit-text
-              layout="responsive"
-              class="story__vs-result fw-800"
-              width="100%"
-              height="100%"
-              min-font-size="28"
-              max-font-size="40"
-            >
-              1 
-            </amp-fit-text>
-            <amp-fit-text
-              layout="responsive"
-              class="story__vs-vs fw-400"
-              width="100%"
-              height="100%"
-              min-font-size="20"
-              max-font-size="21"
-            >
-              vs
-            </amp-fit-text>
-            <amp-fit-text
-              layout="responsive"
-              class="story__vs-result fw-800"
-              width="100%"
-              height="100%"
-              min-font-size="28"
-              max-font-size="40"
-            >
-              0 
-            </amp-fit-text>
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                1
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-vs fw-400"
+                width="100%"
+                height="100%"
+                min-font-size="20"
+                max-font-size="21"
+              >
+                vs
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                0
+              </amp-fit-text>
             </div>
             <div class="story__vs-team center">
               <amp-img
-              id="escudo_visitante"
-              src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/1042.png"
-              layout="responsive"
-              alt="escudo_visitante"
-              class="story__vs-escudo"
+                id="escudo_visitante"
+                src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/2.png"
+                layout="responsive"
+                alt="escudo_visitante"
+                class="story__vs-escudo"
               ></amp-img>
             </div>
           </div>
         </amp-story-grid-layer>
         <!-- Tournament y time -->
         <amp-story-grid-layer template="vertical" class="p-0 story__body">
-          <div  class="story__body__container" >
+          <div class="story__body__container">
             <div
               class="story__body__context"
               animate-in="fade-in"
-              animate-in-duration="2s">
+              animate-in-duration="2s"
+            >
               <amp-img
                 id="foto"
                 src="assets/status/torneo.png"
@@ -555,22 +653,24 @@
                 alt="foto torneo"
                 height="250"
                 width="350"
-                class="story__body__context-torneo"
+                class="story__body__context-torneo d-none"
               ></amp-img>
-              <div class="center" >
+              <div class="center">
                 <amp-fit-text
-                    layout="responsive"
-                    class="story__body__context-time fw-400"
-                    min-font-size="30"
-                    max-font-size="35">
-                    37’
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="30"
+                  max-font-size="35"
+                >
+                  40’
                 </amp-fit-text>
                 <amp-fit-text
-                    layout="responsive"
-                    class="story__body__context-time fw-400"
-                    min-font-size="20"
-                    max-font-size="25">
-                     1T
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="20"
+                  max-font-size="25"
+                >
+                  1T
                 </amp-fit-text>
               </div>
             </div>
@@ -584,43 +684,594 @@
               class="story__body__foto"
               animate-in="fade-in"
               animate-in-duration="2s"
-            ></amp-img>           
+            ></amp-img>
           </div>
         </amp-story-grid-layer>
         <!-- Title -->
-        <amp-story-grid-layer template="vertical" class="p-50 story__body__text gol__body__text">
+        <amp-story-grid-layer
+          template="vertical"
+          class="p-50 story__body__text gol__body__text"
+        >
           <div class="story__body__text-container gol__body__text-container">
             <amp-fit-text
               width="200"
-              height="50"
+              height="60"
               layout="responsive"
               class="fw-800 story__body__title text-shadow-pop-tl"
-              min-font-size="50"
-              max-font-size="70"
+              min-font-size="40"
+              max-font-size="50"
               animate-in="pulse"
               animate-in-duration="1s"
             >
-              ¡GOL!
-            </amp-fit-text>
-            <amp-fit-text
-                width="200"
-                height="14"
-                layout="responsive"
-                class="fw-400 story__body__description"
-                min-font-size="12"
-                max-font-size="16"
-              >
-              9'1T ALL BOYS
+              TARJETA ROJA
             </amp-fit-text>
             <amp-fit-text
               width="200"
-              height="40"
+              height="8"
+              layout="responsive"
+              class="fw-400 story__body__description"
+              min-font-size="12"
+              max-font-size="16"
+            >
+              40'1T ALMIRANTE BROWN
+            </amp-fit-text>
+            <amp-fit-text
+              width="200"
+              height="30"
               layout="responsive"
               class="fw-600 story__body__description"
               min-font-size="15"
               max-font-size="24"
             >
-              GOL DE JUGADA DE FERNANDO BRANDÁN
+              TARJETA ROJA PARA PATRICIO NUÑEZ
+            </amp-fit-text>
+          </div>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-story-page id="type-sustitution">
+        <!-- Gradient -->
+        <amp-story-grid-layer template="fill" class="p-0">
+          <div class="story__bg-gradient"></div>
+        </amp-story-grid-layer>
+        <!-- Footer -->
+        <amp-story-grid-layer template="vertical" class="p-0">
+          <amp-img
+            id="footer"
+            src="assets/status/footer.png"
+            layout="fixed-height"
+            alt="TyC Sports"
+            height="115"
+            class="story__footer"
+          ></amp-img>
+        </amp-story-grid-layer>
+        <!-- Trama -->
+        <amp-story-grid-layer template="vertical" class="p-0">
+          <amp-img
+            id="story__trama"
+            src="assets/card/tycsports-trama.png"
+            layout="fill"
+            alt="story__trama"
+          ></amp-img>
+        </amp-story-grid-layer>
+        <!-- Result -->
+        <amp-story-grid-layer template="vertical" class="p-50 story__vs">
+          <div class="story__vs-container">
+            <div class="story__vs-team center">
+              <amp-img
+                id="escudo_local"
+                src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
+                layout="responsive"
+                alt="escudo_local"
+                class="story__vs-escudo"
+              ></amp-img>
+            </div>
+            <div class="center">
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                1
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-vs fw-400"
+                width="100%"
+                height="100%"
+                min-font-size="20"
+                max-font-size="21"
+              >
+                vs
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                0
+              </amp-fit-text>
+            </div>
+            <div class="story__vs-team center">
+              <amp-img
+                id="escudo_visitante"
+                src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/2.png"
+                layout="responsive"
+                alt="escudo_visitante"
+                class="story__vs-escudo"
+              ></amp-img>
+            </div>
+          </div>
+        </amp-story-grid-layer>
+        <!-- Tournament y time -->
+        <amp-story-grid-layer template="vertical" class="p-0 story__body">
+          <div class="story__body__container">
+            <div
+              class="story__body__context"
+              animate-in="fade-in"
+              animate-in-duration="2s"
+            >
+              <amp-img
+                id="foto"
+                src="assets/status/torneo.png"
+                layout="intrinsic"
+                alt="foto torneo"
+                height="250"
+                width="350"
+                class="story__body__context-torneo d-none"
+              ></amp-img>
+              <div class="center">
+                <amp-fit-text
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="30"
+                  max-font-size="35"
+                >
+                  70’
+                </amp-fit-text>
+                <amp-fit-text
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="20"
+                  max-font-size="25"
+                >
+                  2T
+                </amp-fit-text>
+              </div>
+            </div>
+            <amp-img
+              id="foto"
+              src="assets/sustitution/bg.png"
+              layout="responsive"
+              alt="foto"
+              height="220"
+              width="350"
+              class="story__body__foto"
+              animate-in="fade-in"
+              animate-in-duration="2s"
+            ></amp-img>
+          </div>
+        </amp-story-grid-layer>
+        <!-- Title -->
+
+        <amp-story-grid-layer
+          template="vertical"
+          class="p-50 story__body__text gol__body__text"
+        >
+          <div
+            class="story__body__text-container sustitution__body__text-container"
+          >
+            <div
+              class="sustitution__body__text-player"
+              animate-in="fly-in-left"
+              animate-in-duration="2s"
+            >
+              <amp-fit-text
+                width="200"
+                height="25"
+                layout="responsive"
+                class="fw-800 story__body__title"
+                min-font-size="40"
+                max-font-size="50"
+              >
+                ENTRA
+              </amp-fit-text>
+              <div class="story__body__player">
+                <amp-img
+                  id="foto"
+                  src="assets/sustitution/playerIn.svg"
+                  layout="responsive"
+                  alt="foto"
+                  class="story__body__arrow"
+                ></amp-img>
+                <p class="fw-600">ANGEL STRINGA</p>
+              </div>
+            </div>
+            <div
+              class="sustitution__body__text-player"
+              animate-in="fly-in-right"
+              animate-in-duration="2s"
+            >
+              <amp-fit-text
+                width="200"
+                height="25"
+                layout="responsive"
+                class="fw-800 story__body__title"
+                min-font-size="40"
+                max-font-size="50"
+              >
+                SALE
+              </amp-fit-text>
+              <div class="story__body__player mb-20">
+                <amp-img
+                  id="foto"
+                  src="assets/sustitution/playerOut.svg"
+                  layout="responsive"
+                  alt="foto"
+                  class="story__body__arrow"
+                ></amp-img>
+                <p class="fw-600 20">LEANDRO GUZMÁN</p>
+              </div>
+            </div>
+            <amp-fit-text
+              width="200"
+              height="8"
+              layout="responsive"
+              class="fw-400 story__body__description"
+              min-font-size="12"
+              max-font-size="16"
+            >
+              70'2T ALMIRANTE BROWN
+            </amp-fit-text>
+            <amp-fit-text
+              width="200"
+              height="20"
+              layout="responsive"
+              class="fw-600 story__body__description"
+              min-font-size="15"
+              max-font-size="24"
+            >
+              CAMBIO
+            </amp-fit-text>
+          </div>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-story-page id="type-card">
+        <!-- Gradient -->
+        <amp-story-grid-layer template="fill" class="p-0">
+          <div class="story__bg-gradient"></div>
+        </amp-story-grid-layer>
+        <!-- Footer -->
+        <amp-story-grid-layer template="vertical" class="p-0">
+          <amp-img
+            id="footer"
+            src="assets/status/footer.png"
+            layout="fixed-height"
+            alt="TyC Sports"
+            height="115"
+            class="story__footer"
+          ></amp-img>
+        </amp-story-grid-layer>
+        <!-- Trama -->
+        <amp-story-grid-layer template="vertical" class="p-0">
+          <amp-img
+            id="story__trama"
+            src="assets/card/tycsports-trama.png"
+            layout="fill"
+            alt="story__trama"
+          ></amp-img>
+        </amp-story-grid-layer>
+        <!-- Result -->
+        <amp-story-grid-layer template="vertical" class="p-50 story__vs">
+          <div class="story__vs-container">
+            <div class="story__vs-team center">
+              <amp-img
+                id="escudo_local"
+                src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
+                layout="responsive"
+                alt="escudo_local"
+                class="story__vs-escudo"
+              ></amp-img>
+            </div>
+            <div class="center">
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                1
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-vs fw-400"
+                width="100%"
+                height="100%"
+                min-font-size="20"
+                max-font-size="21"
+              >
+                vs
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                0
+              </amp-fit-text>
+            </div>
+            <div class="story__vs-team center">
+              <amp-img
+                id="escudo_visitante"
+                src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/2.png"
+                layout="responsive"
+                alt="escudo_visitante"
+                class="story__vs-escudo"
+              ></amp-img>
+            </div>
+          </div>
+        </amp-story-grid-layer>
+        <!-- Tournament y time -->
+        <amp-story-grid-layer template="vertical" class="p-0 story__body">
+          <div class="story__body__container">
+            <div
+              class="story__body__context"
+              animate-in="fade-in"
+              animate-in-duration="2s"
+            >
+              <amp-img
+                id="foto"
+                src="assets/status/torneo.png"
+                layout="intrinsic"
+                alt="foto torneo"
+                height="250"
+                width="350"
+                class="story__body__context-torneo d-none"
+              ></amp-img>
+              <div class="center">
+                <amp-fit-text
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="30"
+                  max-font-size="35"
+                >
+                  50’
+                </amp-fit-text>
+                <amp-fit-text
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="20"
+                  max-font-size="25"
+                >
+                  2T
+                </amp-fit-text>
+              </div>
+            </div>
+            <amp-img
+              id="foto"
+              src="assets/card/yellowCard.png"
+              layout="responsive"
+              alt="foto"
+              height="220"
+              width="350"
+              class="story__body__foto"
+              animate-in="fade-in"
+              animate-in-duration="2s"
+            ></amp-img>
+          </div>
+        </amp-story-grid-layer>
+        <!-- Title -->
+        <amp-story-grid-layer
+          template="vertical"
+          class="p-50 story__body__text gol__body__text"
+        >
+          <div class="story__body__text-container gol__body__text-container">
+            <amp-fit-text
+              width="200"
+              height="60"
+              layout="responsive"
+              class="fw-800 story__body__title text-shadow-pop-tl"
+              min-font-size="40"
+              max-font-size="50"
+              animate-in="pulse"
+              animate-in-duration="1s"
+            >
+              TARJETA AMARILLA
+            </amp-fit-text>
+            <amp-fit-text
+              width="200"
+              height="8"
+              layout="responsive"
+              class="fw-400 story__body__description"
+              min-font-size="12"
+              max-font-size="16"
+            >
+              50'2T ALMIRANTE BROWN
+            </amp-fit-text>
+            <amp-fit-text
+              width="200"
+              height="30"
+              layout="responsive"
+              class="fw-600 story__body__description"
+              min-font-size="15"
+              max-font-size="24"
+            >
+              TARJETA ROJA PARA PATRICIO NUÑEZ
+            </amp-fit-text>
+          </div>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-story-page id="type-status">
+        <!-- Gradient -->
+        <amp-story-grid-layer template="fill" class="p-0">
+          <div class="story__bg-gradient"></div>
+        </amp-story-grid-layer>
+        <!-- Footer -->
+        <amp-story-grid-layer template="vertical" class="p-0">
+          <amp-img
+            id="footer"
+            src="assets/status/footer.png"
+            layout="fixed-height"
+            alt="TyC Sports"
+            height="115"
+            class="story__footer"
+          ></amp-img>
+        </amp-story-grid-layer>
+        <!-- Trama -->
+        <amp-story-grid-layer template="vertical" class="p-0">
+          <amp-img
+            id="story__trama"
+            src="assets/status/trama.png"
+            layout="fill"
+            alt="story__trama"
+          ></amp-img>
+        </amp-story-grid-layer>
+        <!-- Result -->
+        <amp-story-grid-layer template="vertical" class="p-50 story__vs">
+          <div class="story__vs-container">
+            <div class="story__vs-team center">
+              <amp-img
+                id="escudo_local"
+                src=" https://s3.amazonaws.com/statics-files.tycsports.com/escudos/10.png"
+                layout="responsive"
+                alt="escudo_local"
+                class="story__vs-escudo"
+              ></amp-img>
+            </div>
+            <div class="center">
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                1
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-vs fw-400"
+                width="100%"
+                height="100%"
+                min-font-size="20"
+                max-font-size="21"
+              >
+                vs
+              </amp-fit-text>
+              <amp-fit-text
+                layout="responsive"
+                class="story__vs-result fw-800"
+                width="100%"
+                height="100%"
+                min-font-size="28"
+                max-font-size="40"
+              >
+                0
+              </amp-fit-text>
+            </div>
+            <div class="story__vs-team center">
+              <amp-img
+                id="escudo_visitante"
+                src="https://s3.amazonaws.com/statics-files.tycsports.com/escudos/2.png"
+                layout="responsive"
+                alt="escudo_visitante"
+                class="story__vs-escudo"
+              ></amp-img>
+            </div>
+          </div>
+        </amp-story-grid-layer>
+        <!-- Tournament y time -->
+        <amp-story-grid-layer template="vertical" class="p-0 story__body">
+          <div class="story__body__container">
+            <div
+              class="story__body__context"
+              animate-in="fade-in"
+              animate-in-duration="2s"
+            >
+              <amp-img
+                id="foto"
+                src="assets/status/torneo.png"
+                layout="intrinsic"
+                alt="foto torneo"
+                height="250"
+                width="350"
+                class="story__body__context-torneo"
+              ></amp-img>
+              <div class="center">
+                <amp-fit-text
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="30"
+                  max-font-size="35"
+                >
+                  0’
+                </amp-fit-text>
+                <amp-fit-text
+                  layout="responsive"
+                  class="story__body__context-time fw-400"
+                  min-font-size="20"
+                  max-font-size="25"
+                >
+                  1T
+                </amp-fit-text>
+              </div>
+            </div>
+            <amp-img
+              id="foto"
+              src="assets/status/foto.png"
+              layout="responsive"
+              alt="foto"
+              height="220"
+              width="350"
+              class="story__body__foto"
+              animate-in="fly-in-left"
+              animate-in-duration="1s"
+            ></amp-img>
+          </div>
+        </amp-story-grid-layer>
+        <!-- Multimedia -->
+        <amp-story-grid-layer template="fill" class="p-50 story__multimedia">
+          <amp-img
+            id="foto"
+            src="assets/status/foto2.png"
+            layout="responsive"
+            alt="foto"
+            height="10"
+            width="350"
+            class="story__body__foto"
+          ></amp-img>
+        </amp-story-grid-layer>
+        <!-- Title -->
+        <amp-story-grid-layer
+          template="vertical"
+          class="p-50 story__body__text"
+        >
+          <div style="color: #fff; padding: 0">
+            <amp-fit-text
+              width="200"
+              height="200"
+              layout="responsive"
+              class="fw-800 story__body__title text-shadow-pop-tl"
+              min-font-size="22"
+              max-font-size="50"
+              animate-in="fly-in-left"
+              animate-in-duration="1s"
+            >
+              TERMINÓ EL 2° TIEMPO
             </amp-fit-text>
           </div>
         </amp-story-grid-layer>
