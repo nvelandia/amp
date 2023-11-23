@@ -6,23 +6,23 @@
   --margin-tyc: 45px;
 }
 @font-face {
-  font-family: 'Monserrat';
-  src: url('./fonts/Montserrat/static/Montserrat-Medium.ttf');
+  font-family: "Monserrat";
+  src: url("./fonts/Montserrat/static/Montserrat-Medium.ttf");
   font-weight: 400;
 }
 @font-face {
-  font-family: 'Monserrat';
-  src: url('./fonts/Montserrat/static/Montserrat-Bold.ttf');
+  font-family: "Monserrat";
+  src: url("./fonts/Montserrat/static/Montserrat-Bold.ttf");
   font-weight: 600;
 }
 @font-face {
-  font-family: 'Monserrat';
-  src: url('./fonts/Montserrat/static/Montserrat-Black.ttf');
+  font-family: "Monserrat";
+  src: url("./fonts/Montserrat/static/Montserrat-Black.ttf");
   font-weight: 800;
 }
 
 amp-story-page {
-  font-family: 'Monserrat', sans-serif;
+  font-family: "Monserrat", sans-serif;
   background: var(--color-background);
 }
 amp-story-grid-layer {
@@ -68,6 +68,9 @@ amp-story-grid-layer {
 .d-none {
   display: none;
 }
+.hidden {
+  visibility: hidden;
+}
 
 /* General Story */
 
@@ -84,6 +87,13 @@ amp-story-grid-layer {
 .story__footer {
   position: absolute;
   bottom: 0;
+}
+.story__photo {
+  position: absolute;
+  top: 0;
+}
+.story__footer img {
+  object-fit: cover;
 }
 .story__vs {
   margin-bottom: 23%;
@@ -104,11 +114,11 @@ amp-story-grid-layer {
 .story__vs-team {
   width: 3.8rem;
   height: 3.5rem;
-  background-color: #fff;
+  background-color: var(--color-text-light);
   overflow: hidden;
 }
 .story__vs-result {
-  color: #fff;
+  color: var(--color-text-light);
   height: 100%;
   width: 3rem;
   text-align: center;
@@ -172,7 +182,7 @@ max-font-size="18" */
   margin-bottom: 17%;
 }
 .gol__body__text {
-  margin-bottom: 5%;
+  margin-bottom: 6%;
 }
 .gol__body__text-container {
   margin-bottom: 25%;
@@ -187,6 +197,10 @@ max-font-size="18" */
   flex-direction: column;
   justify-content: flex-end;
 }
+.cards_body {
+  align-content: center;
+  margin-top: 20%;
+}
 .text-shadow-pop-tl {
   -webkit-animation: text-shadow-pop-tl 0.6s both;
   animation: text-shadow-pop-tl 0.6s both;
@@ -196,6 +210,7 @@ max-font-size="18" */
   align-items: flex-start !important;
   color: #fff;
   padding-left: 2px;
+  margin-bottom: 1%;
 }
 .story__body__description div {
   color: #fff;
@@ -207,7 +222,7 @@ max-font-size="18" */
   align-items: center;
 }
 .story__body__arrow {
-  height: 40px;
+  height: 30px;
   width: 40px;
   margin-right: 15px;
 }
@@ -224,16 +239,14 @@ max-font-size="18" */
 .tag-container {
   justify-content: flex-end;
   align-items: center;
-  border: 1px solid red;
 }
 
 .tag-foto {
-  overflow: visible !important;
+  margin-bottom: 80px;
+  height: 40%;
 }
 
 .tag-foto img {
   object-fit: contain;
   width: 70px;
-  height: 280px;
-  margin-bottom: 20px;
 }
